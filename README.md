@@ -65,9 +65,12 @@ Setting up a virtual environment helps isolate project dependencies and avoid co
 ## Step 4: Create a `.env` File
 
 1. Create a `.env` file in the project directory (either manually or using the command below):
-   ```bash
-   touch .env
-   ```
+   - For Windows:
+     create a new file named `.env` in the project directory.
+   - For macOS/Linux:
+      ```bash
+      touch .env
+      ```
 2. Open the `.env` file and add the following lines:
    ```plaintext
    SPOTIFY_CLIENT_ID=your_client_id
