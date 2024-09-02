@@ -51,11 +51,11 @@ Setting up a virtual environment helps isolate project dependencies and avoid co
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/arnvgh/get-spotify-refresh-token
+   git clone https://github.com/yashsuhagiya/spotify-refresh-token-generator
    ```
 2. Navigate to the project directory:
    ```bash
-   cd get-spotify-refresh-token
+   cd spotify-refresh-token-generator
    ```
 3. Install the required dependencies:
    ```bash
@@ -98,6 +98,15 @@ Setting up a virtual environment helps isolate project dependencies and avoid co
 Congratulations! You have successfully stored your Spotify refresh token using Spotipy. You can now use this token to access the Spotify API on behalf of the authenticated user.
 
 **Important**: Keep your `.env` file containing your credentials and the `.cache` file secure and do not share them with others.
+
+## Understanding Scopes
+
+Scopes define what permissions your application is requesting from the user. In this guide, the following scopes are used:
+
+- **`user-read-playback-state`**: Allows the application to read the user's current playback state.
+- **`user-read-currently-playing`**: Allows the application to read the currently playing track on the user's Spotify account.
+
+To explore more scopes and their meanings, visit the [Spotify API Authorization Scopes documentation](https://developer.spotify.com/documentation/general/guides/authorization/scopes/).
 
 ---
 
