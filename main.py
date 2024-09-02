@@ -1,9 +1,12 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from dotenv import dotenv_values
+import json
 
+# Load configuration from .env file
 config = dotenv_values(".env")
 
+# Initialize Spotify client
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         client_id=config["SPOTIFY_CLIENT_ID"],
@@ -13,8 +16,14 @@ sp = spotipy.Spotify(
     )
 )
 
+# Get current user information
 current_user = sp.current_user()
 
+# Ensure the current user data is not None
 assert current_user is not None
 
-print(current_user["id"], "token saved in '.cache' file.")
+# Save user data to a JSON file
+with open("current_user_data.json", "w") as json_file:
+    json.dump(current_user, json_file, indent=4)
+
+print(f"Information saved in 'spotify-info.json' file.")
