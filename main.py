@@ -22,8 +22,4 @@ current_user = sp.current_user()
 # Ensure the current user data is not None
 assert current_user is not None
 
-# Save user data to a JSON file
-with open("current_user_data.json", "w") as json_file:
-    json.dump(current_user, json_file, indent=4)
-
-print(f"Information saved in 'spotify-info.json' file.")
+print(current_user["id"], "token saved in '.cache' file.")
